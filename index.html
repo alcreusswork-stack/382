@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブイトピア キッズスクール 小牧 | スイミング・体操・ダンスなど多彩な習い事</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF6B2B;
+      --orange-light: #FF8C55;
+      --orange-pale: #FFF3EB;
+      --blue: #00B0D8;
+      --blue-light: #E6F7FC;
+      --navy: #1A3A5C;
+      --navy-light: #2A527A;
+      --white: #FFFFFF;
+      --bg: #FAFCFF;
+      --text: #1A2B3C;
+      --text-light: #5A6A7A;
+      --radius: 16px;
+      --radius-lg: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--white);
+      border-bottom: 3px solid var(--orange);
+      padding: 14px 20px;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 26px; height: 26px; }
+    .logo-text { line-height: 1.2; }
+    .logo-en {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .logo-ja {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+    .header-tel {
+      text-align: right;
+    }
+    .header-tel a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-tel a svg { width: 18px; height: 18px; }
+    .tel-label {
+      font-size: 10px;
+      color: var(--text-light);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 400;
+      text-align: right;
+    }
+
+    /* ========== HERO IMAGE ========== */
+    .hero-image-wrap {
+      width: 100%;
+      max-height: 520px;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ========== HERO COPY ========== */
+    .hero-copy {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 48px 20px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-copy::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: var(--orange);
+      opacity: 0.15;
+      border-radius: 50%;
+    }
+    .hero-copy::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 240px; height: 240px;
+      background: var(--blue);
+      opacity: 0.12;
+      border-radius: 50%;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+      letter-spacing: 0.05em;
+    }
+    .hero-copy h1 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: clamp(24px, 5vw, 42px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 18px;
+    }
+    .hero-copy h1 em {
+      font-style: normal;
+      color: #FFD166;
+    }
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 17px);
+      color: rgba(255,255,255,0.85);
+      max-width: 580px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+    .hero-cta-wrap {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-trial {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 50px;
+      box-shadow: 0 6px 20px rgba(255,107,43,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-trial:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255,107,43,0.5); }
+    .btn-trial svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.6);
+      transition: background 0.2s;
+    }
+    .btn-contact:hover { background: rgba(255,255,255,0.1); }
+
+    /* ========== SECTION COMMONS ========== */
+    .section { padding: 64px 20px; }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .section-title {
+      font-size: clamp(20px, 4vw, 32px);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .section-title span {
+      display: inline-block;
+      position: relative;
+    }
+    .section-title span::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 4px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+    .section-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    /* ========== FEATURES (イチオシ) ========== */
+    .features { background: var(--white); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { border-color: var(--orange); transform: translateY(-3px); }
+    .feature-card.highlight {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+      color: var(--white);
+    }
+    .feature-card.highlight .feat-title,
+    .feature-card.highlight .feat-body { color: var(--white); }
+    .feat-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      font-size: 26px;
+    }
+    .feature-card:not(.highlight) .feat-icon { background: var(--orange-pale); }
+    .feature-card.highlight .feat-icon { background: rgba(255,255,255,0.25); }
+    .feat-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .feat-body {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* ========== PROGRAMS ========== */
+    .programs { background: var(--blue-light); }
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .program-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .program-item:hover { transform: translateY(-3px); }
+    .program-emoji { font-size: 30px; margin-bottom: 8px; }
+    .program-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .programs-note {
+      background: var(--white);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* ========== SWIMMING (スイミングハイライト) ========== */
+    .swimming { background: var(--white); }
+    .swim-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .swim-text h3 {
+      font-size: clamp(18px, 3.5vw, 26px);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .swim-text h3 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .swim-text p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .swim-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .swim-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .step-num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+    .swim-visual {
+      background: linear-gradient(135deg, var(--blue) 0%, #0090B8 100%);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      color: var(--white);
+      text-align: center;
+    }
+    .swim-number {
+      font-family: 'Poppins', sans-serif;
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .swim-number-label {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      opacity: 0.9;
+    }
+    .swim-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+    .swim-feat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    /* ========== WATER QUALITY ========== */
+    .water-quality { background: var(--orange-pale); }
+    .water-inner {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .water-badge {
+      display: inline-block;
+      background: var(--white);
+      border: 2px solid var(--orange);
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .water-inner h2 {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+    .water-inner p { font-size: 15px; color: var(--text-light); line-height: 1.85; }
+
+    /* ========== SEASONAL EVENTS ========== */
+    .events { background: var(--white); }
+    .events-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .event-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+    }
+    .event-header {
+      padding: 18px 20px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .event-header.blue { background: var(--blue); }
+    .event-header.orange { background: var(--orange); }
+    .event-header.navy { background: var(--navy); }
+    .event-body {
+      padding: 16px 20px;
+      background: var(--bg);
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* ========== COMING SOON ========== */
+    .coming-soon { background: linear-gradient(135deg, var(--navy) 0%, #254B6A 100%); }
+    .cs-inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .cs-label {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.08em;
+    }
+    .cs-inner h2 {
+      font-size: clamp(18px, 3.5vw, 26px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    .cs-inner p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.85;
+    }
+
+    /* ========== CTA ========== */
+    .cta-section { background: var(--orange); padding: 56px 20px; }
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-inner h2 {
+      font-size: clamp(20px, 4vw, 32px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .cta-inner p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .cta-btn-wrap {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--orange);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 50px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.7);
+      transition: background 0.2s;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.12); }
+
+    /* ========== REVIEWS ========== */
+    .reviews { background: var(--blue-light); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .review-stars {
+      color: #FFB800;
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    .review-text {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .review-meta {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* ========== INFO ========== */
+    .info-section { background: var(--white); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid #EEF2F7; }
+    .info-table th {
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+      width: 100px;
+      background: var(--blue-light);
+      vertical-align: top;
+    }
+    .info-table td {
+      padding: 12px 14px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .info-table td a { color: var(--blue); }
+
+    /* ========== MAP ========== */
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .map-wrap iframe { width: 100%; display: block; }
+    .map-btn-wrap {
+      text-align: center;
+      margin-top: 16px;
+    }
+    .btn-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+    .btn-map:hover { background: var(--navy-light); }
+    .btn-map svg { width: 16px; height: 16px; }
+
+    /* ========== SNS ========== */
+    .sns-section { background: var(--orange-pale); padding: 48px 20px; }
+    .sns-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .sns-inner h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .sns-inner p {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+    .sns-icons {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+    }
+    .sns-icon-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+    .sns-icon-link:hover { transform: translateY(-3px); }
+    .sns-icon-img {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer { background: var(--navy); padding: 40px 20px 28px; }
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-logo {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .footer-logo span {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 3px;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-address {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ========== FLOATING CTA ========== */
+    .float-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 22px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(255,107,43,0.5);
+      animation: pulse-btn 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 6px 24px rgba(255,107,43,0.5); }
+      50% { box-shadow: 0 8px 32px rgba(255,107,43,0.7); }
+    }
+    .float-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 680px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-tel { text-align: center; }
+      .header-tel a { justify-content: center; }
+      .hero-image-wrap img { height: 240px; }
+      .swim-inner { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .float-cta { bottom: 14px; right: 14px; left: 14px; }
+      .float-btn { justify-content: center; }
+    }
+    @media (max-width: 400px) {
+      .hero-cta-wrap { flex-direction: column; align-items: center; }
+      .cta-btn-wrap { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://vtopia.jp/komaki/" target="_blank" rel="noopener" class="header-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" r="11" stroke="white" stroke-width="2"/>
+          <path d="M8 10 L13 17 L18 10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="logo-en">Vtopia Kids School</div>
+        <div class="logo-ja">ブイトピア キッズスクール 小牧</div>
+      </div>
+    </a>
+    <div class="header-tel">
+      <a href="tel:0568725051">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 3.5C2 2.67 2.67 2 3.5 2h3.17l1.5 3.75-1.86 1.24C7.07 9.03 10.97 12.93 13.01 13.69L14.25 11.83 18 13.33V16.5c0 .83-.67 1.5-1.5 1.5C8.43 18 2 11.57 2 3.5z" fill="#1A3A5C"/>
+        </svg>
+        0568-72-5051
+      </a>
+      <div class="tel-label">受付：営業時間内</div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO IMAGE ========== -->
+<div class="hero-image-wrap">
+  <img src="images/hero.jpg" alt="ブイトピア キッズスクール 小牧 — 子どもたちが楽しく活動する様子">
+</div>
+
+<!-- ========== HERO COPY ========== -->
+<section class="hero-copy">
+  <div class="hero-badge">🏊 愛知県小牧市の子ども習い事スクール</div>
+  <h1>スイミングも、体操も、ダンスも。<br><em>一か所で、たくさんの「好き」を見つけよう。</em></h1>
+  <p class="hero-sub">ブイトピア キッズスクール 小牧は、スイミングをはじめ体操・ダンス・空手・書道・学研教室など、多彩なプログラムをご用意。お子様の「やってみたい」に、ここで応えます。</p>
+  <div class="hero-cta-wrap">
+    <a href="https://vtopia.jp/komaki/yoyaku/" target="_blank" rel="noopener" class="btn-trial">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm.75 4.75v4l3 1.5-.75 1.5-3.75-1.875A.75.75 0 019.25 11V6.75h1.5z"/></svg>
+      無料体験・ご予約
+    </a>
+    <a href="https://vtopia.jp/komaki/" target="_blank" rel="noopener" class="btn-contact">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75z"/></svg>
+      公式サイトを見る
+    </a>
+  </div>
+</section>
+
+<!-- ========== FEATURES (強み) ========== -->
+<section class="section features">
+  <div class="section-inner">
+    <h2 class="section-title"><span>ブイトピアが選ばれる理由</span></h2>
+    <p class="section-lead">一つの施設で、運動も学習も。充実した環境でお子様の可能性を広げます。</p>
+    <div class="features-grid">
+      <div class="feature-card highlight">
+        <div class="feat-icon">🌟</div>
+        <div class="feat-title">多彩なプログラムが一か所に</div>
+        <div class="feat-body">スイミング・体操・ダンス・空手・書道・学研教室など、お子様の「やりたい！」をワンストップで叶えられます。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">💧</div>
+        <div class="feat-title">こだわりの「元始活性水」プール</div>
+        <div class="feat-body">塩素の刺激を抑えた特別な水質を採用。肌が敏感なお子様でも、のびのびと泳げる環境を整えています。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🚉</div>
+        <div class="feat-title">味岡駅から徒歩約2分</div>
+        <div class="feat-body">名鉄小牧線「味岡駅」からすぐ。駐車場も完備しているので、電車でも車でもお気軽にお越しいただけます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMS ========== -->
+<section class="section programs">
+  <div class="section-inner">
+    <h2 class="section-title"><span>充実のプログラム一覧</span></h2>
+    <p class="section-lead">運動から学習まで幅広いジャンルをカバー。ずっとここに通いたくなります。</p>
+    <div class="programs-grid">
+      <div class="program-item">
+        <div class="program-emoji">🏊</div>
+        <div class="program-name">スイミング</div>
+      </div>
+      <div class="program-item">
+        <div class="program-emoji">🤸</div>
+        <div class="program-name">体操教室</div>
+      </div>
+      <div class="program-item">
+        <div class="program-emoji">💃</div>
+        <div class="program-name">キッズダンス</div>
+      </div>
+      <div class="program-item">
+        <div class="program-emoji">🥋</div>
+        <div class="program-name">空手</div>
+      </div>
+      <div class="program-item">
+        <div class="program-emoji">🖌️</div>
+        <div class="program-name">書道</div>
+      </div>
+      <div class="program-item">
+        <div class="program-emoji">📚</div>
+        <div class="program-name">学習塾</div>
+      </div>
+    </div>
+    <div class="programs-note">
+      ※ 開講プログラムは時期により変更となる場合があります。最新情報は<a href="https://vtopia.jp/komaki/" target="_blank">公式サイト</a>をご確認ください。
+    </div>
+  </div>
+</section>
+
+<!-- ========== SWIMMING ========== -->
+<section class="section swimming">
+  <div class="section-inner">
+    <h2 class="section-title"><span>スイミングの特長</span></h2>
+    <p class="section-lead">ブイトピアのスイミングは、きめ細かいカリキュラムで着実に上達できます。</p>
+    <div class="swim-inner">
+      <div class="swim-text">
+        <h3><em>17段階</em>のカリキュラムで<br>お子様のペースに合わせて上達</h3>
+        <p>水慣れから4泳法の習得、さらに活用レベルまで、細かなステップに分けてサポート。「難しい」「怖い」という気持ちをゆっくりほぐしながら、自信をもって泳げるように丁寧に指導します。</p>
+        <div class="swim-steps">
+          <div class="swim-step">
+            <div class="step-num">1</div>
+            <div class="step-text">水慣れ・水に親しむ段階</div>
+          </div>
+          <div class="swim-step">
+            <div class="step-num">2</div>
+            <div class="step-text">浮き方・バタ足など基礎習得</div>
+          </div>
+          <div class="swim-step">
+            <div class="step-num">3</div>
+            <div class="step-text">4泳法（クロール・背泳ぎ・平泳ぎ・バタフライ）</div>
+          </div>
+          <div class="swim-step">
+            <div class="step-num">4</div>
+            <div class="step-text">タイムアップ・泳法の活用レベルへ</div>
+          </div>
+        </div>
+      </div>
+      <div class="swim-visual">
+        <div class="swim-number">17</div>
+        <div class="swim-number-label">段階のカリキュラム</div>
+        <div class="swim-features">
+          <div class="swim-feat">💧 塩素の刺激を抑えた元始活性水</div>
+          <div class="swim-feat">🏊 水慣れから上級者まで対応</div>
+          <div class="swim-feat">👶 お子様のペースを尊重</div>
+          <div class="swim-feat">🎖️ 段階別進級システム</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WATER QUALITY ========== -->
+<section class="section water-quality">
+  <div class="section-inner">
+    <div class="water-inner">
+      <div class="water-badge">💧 プールの水質へのこだわり</div>
+      <h2>「元始活性水」で<br>お子様にやさしいプール環境</h2>
+      <p>ブイトピアのプールでは、塩素の刺激を抑えた「元始活性水」を使用しています。クチコミでも「プールの水がきれい！」とご好評をいただいており、肌の敏感なお子様も安心して通っていただけます。まだ建て替えたばかりの清潔な施設で、のびのびとご利用ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEASONAL EVENTS ========== -->
+<section class="section events">
+  <div class="section-inner">
+    <h2 class="section-title"><span>体験・イベント情報</span></h2>
+    <p class="section-lead">入会前に雰囲気を確かめられる機会が豊富。まずは気軽に体験してみましょう。</p>
+    <div class="events-list">
+      <div class="event-card">
+        <div class="event-header blue">🏊 無料体験レッスン</div>
+        <div class="event-body">スイミングをはじめ各プログラムの無料体験を随時開催。お子様が実際に雰囲気を体感してから入会をご検討いただけます。</div>
+      </div>
+      <div class="event-card">
+        <div class="event-header orange">❄️ 冬の短期スクール</div>
+        <div class="event-body">冬休みなど長期休暇を活用した短期集中スクールを開催。泳げるようになりたいお子様にぴったりです。</div>
+      </div>
+      <div class="event-card">
+        <div class="event-header navy">🎉 季節ごとのイベント</div>
+        <div class="event-body">一年を通じた各種イベントで、仲間とのつながりや達成感を感じられる場を設けています。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMING SOON ========== -->
+<section class="section coming-soon">
+  <div class="section-inner">
+    <div class="cs-inner">
+      <div class="cs-label">🚀 準備中のサービス</div>
+      <h2>体操 × 学習が融合した<br>新しいプログラムが登場予定</h2>
+      <p>学習教室と体操教室のノウハウを組み合わせた、新しいプログラムの展開を準備中です。「運動も学習も」を両立したいご家族にとって、さらに便利な環境をご提供できるよう取り組んでいます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>まずは無料体験から！<br>お気軽にご参加ください</h2>
+    <p>ブイトピア キッズスクール 小牧では、随時無料体験を受け付けています。<br>お子様のペースに合わせてご参加いただけますので、ぜひお気軽にどうぞ。</p>
+    <div class="cta-btn-wrap">
+      <a href="https://vtopia.jp/komaki/yoyaku/" target="_blank" rel="noopener" class="btn-white">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414a2 2 0 00-.586-1.414l-3.414-3.414A2 2 0 0010.586 2H6zm5 1.586L14.414 7H11V3.586zM8.5 11h3a.5.5 0 010 1h-3a.5.5 0 010-1zm-1-2.5a.5.5 0 01.5-.5h4a.5.5 0 010 1H8a.5.5 0 01-.5-.5zm.5 5a.5.5 0 000 1h3a.5.5 0 000-1H8z"/></svg>
+        無料体験を予約する
+      </a>
+      <a href="tel:0568725051" class="btn-outline-white">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M2 3.5C2 2.67 2.67 2 3.5 2h3.17l1.5 3.75-1.86 1.24C7.07 9.03 10.97 12.93 13.01 13.69L14.25 11.83 18 13.33V16.5c0 .83-.67 1.5-1.5 1.5C8.43 18 2 11.57 2 3.5z"/></svg>
+        電話で問い合わせる
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="section reviews">
+  <div class="section-inner">
+    <h2 class="section-title"><span>みんなの声</span></h2>
+    <p class="section-lead">実際にご利用いただいた方々からのクチコミです。</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★</div>
+        <p class="review-text">まだ建て替えたばかりで綺麗です！プールの水も綺麗です！体操教室などもあります</p>
+        <div class="review-meta">Google クチコミ</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★</div>
+        <p class="review-text">子供たちはみんな楽しそう☆</p>
+        <div class="review-meta">Google クチコミ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INFO & MAP ========== -->
+<section class="section info-section">
+  <div class="section-inner">
+    <h2 class="section-title"><span>アクセス・施設情報</span></h2>
+    <p class="section-lead">名鉄「味岡駅」から徒歩約2分。駐車場も完備しています。</p>
+    <div class="info-grid">
+      <div>
+        <table class="info-table">
+          <tr>
+            <th>施設名</th>
+            <td>ブイトピア キッズスクール 小牧</td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td>〒485-0828<br>愛知県小牧市小松寺５丁目２</td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td><a href="tel:0568725051">0568-72-5051</a></td>
+          </tr>
+          <tr>
+            <th>定休日</th>
+            <td>日曜日</td>
+          </tr>
+          <tr>
+            <th>アクセス</th>
+            <td>名鉄小牧線「味岡駅」より徒歩約2分<br>駐車場あり</td>
+          </tr>
+          <tr>
+            <th>公式HP</th>
+            <td><a href="https://vtopia.jp/komaki/" target="_blank" rel="noopener">vtopia.jp/komaki/</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.841924035808!2d136.9419117!3d35.3099091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030d27599c1fa3%3A0x7082bcda527e822!2z44OW44Kk44OI44OU44KiIOOCreODg-OCuuOCueOCr-ODvOODqyDlsI_niac!5e0!3m2!1sja!2sjp!4v1793251424953!5m2!1sja!2sjp" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="map-btn-wrap">
+          <a href="https://www.google.com/maps/place/%E3%83%96%E3%82%A4%E3%83%88%E3%83%94%E3%82%A2+%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB+%E5%B0%8F%E7%89%A7/@35.3099091,136.9419117,17z/data=!3m1!4b1!4m6!3m5!1s0x60030d27599c1fa3:0x7082bcda527e822!8m2!3d35.3099091!4d136.9419117!16s%2Fg%2F11b7y835cg?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-map">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5 5 0 00-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 00-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg>
+            Googleマップで見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SNS ========== -->
+<section class="sns-section">
+  <div class="sns-inner">
+    <h2>SNSでも情報発信中！</h2>
+    <p>最新イベント情報やレッスンの様子をInstagramで公開しています。ぜひフォローしてください。</p>
+    <div class="sns-icons">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/vtopia_komaki/" target="_blank" rel="noopener" class="sns-icon-link">
+        <div class="sns-icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="52" height="52">
+            <defs>
+              <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+                <stop offset="0%" stop-color="#fdf497"/>
+                <stop offset="5%" stop-color="#fdf497"/>
+                <stop offset="45%" stop-color="#fd5949"/>
+                <stop offset="60%" stop-color="#d6249f"/>
+                <stop offset="90%" stop-color="#285AEB"/>
+              </radialGradient>
+            </defs>
+            <rect width="192" height="192" rx="42" fill="url(#ig-grad)"/>
+            <path d="M96 46c-13.6 0-15.3.1-20.6.3-5.3.2-8.9 1.1-12.1 2.3-3.3 1.3-6.1 3-8.9 5.8-2.8 2.8-4.5 5.6-5.8 8.9-1.2 3.2-2.1 6.8-2.3 12.1-.2 5.3-.3 7-.3 20.6s.1 15.3.3 20.6c.2 5.3 1.1 8.9 2.3 12.1 1.3 3.3 3 6.1 5.8 8.9 2.8 2.8 5.6 4.5 8.9 5.8 3.2 1.2 6.8 2.1 12.1 2.3 5.3.2 7 .3 20.6.3s15.3-.1 20.6-.3c5.3-.2 8.9-1.1 12.1-2.3 3.3-1.3 6.1-3 8.9-5.8 2.8-2.8 4.5-5.6 5.8-8.9 1.2-3.2 2.1-6.8 2.3-12.1.2-5.3.3-7 .3-20.6s-.1-15.3-.3-20.6c-.2-5.3-1.1-8.9-2.3-12.1-1.3-3.3-3-6.1-5.8-8.9-2.8-2.8-5.6-4.5-8.9-5.8-3.2-1.2-6.8-2.1-12.1-2.3C111.3 46.1 109.6 46 96 46zm0 9c13.4 0 15 .1 20.2.3 4.9.2 7.5.9 9.3 1.6 2.3.9 4 2 5.7 3.7 1.7 1.7 2.8 3.4 3.7 5.7.7 1.8 1.4 4.4 1.6 9.3.2 5.2.3 6.8.3 20.2s-.1 15-.3 20.2c-.2 4.9-.9 7.5-1.6 9.3-.9 2.3-2 4-3.7 5.7-1.7 1.7-3.4 2.8-5.7 3.7-1.8.7-4.4 1.4-9.3 1.6-5.2.2-6.8.3-20.2.3s-15-.1-20.2-.3c-4.9-.2-7.5-.9-9.3-1.6-2.3-.9-4-2-5.7-3.7-1.7-1.7-2.8-3.4-3.7-5.7-.7-1.8-1.4-4.4-1.6-9.3-.2-5.2-.3-6.8-.3-20.2s.1-15 .3-20.2c.2-4.9.9-7.5 1.6-9.3.9-2.3 2-4 3.7-5.7 1.7-1.7 3.4-2.8 5.7-3.7 1.8-.7 4.4-1.4 9.3-1.6C81 55.1 82.6 55 96 55zm0 15.3c-14.2 0-25.7 11.5-25.7 25.7S81.8 121.7 96 121.7 121.7 110.2 121.7 96 110.2 70.3 96 70.3zm0 42.4c-9.2 0-16.7-7.5-16.7-16.7S86.8 79.3 96 79.3s16.7 7.5 16.7 16.7-7.5 16.7-16.7 16.7zm32.7-43.4c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" fill="white"/>
+          </svg>
+        </div>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <span>Vtopia Kids School</span>
+        ブイトピア キッズスクール 小牧
+      </div>
+      <div class="footer-links">
+        <a href="https://vtopia.jp/komaki/" target="_blank" rel="noopener">公式サイト</a>
+        <a href="https://vtopia.jp/komaki/yoyaku/" target="_blank" rel="noopener">体験予約</a>
+        <a href="https://www.instagram.com/vtopia_komaki/" target="_blank" rel="noopener">Instagram</a>
+        <a href="tel:0568725051">電話でお問い合わせ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <address class="footer-address" style="font-style:normal;">
+        〒485-0828 愛知県小牧市小松寺５丁目２　／　TEL: 0568-72-5051　／　定休日：日曜日
+      </address>
+      <div class="footer-copy">&copy; Vtopia Kids School Komaki. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== FLOATING CTA ========== -->
+<div class="float-cta">
+  <a href="https://vtopia.jp/komaki/yoyaku/" target="_blank" rel="noopener" class="float-btn">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm.75 4.75v4l3 1.5-.75 1.5-3.75-1.875A.75.75 0 019.25 11V6.75h1.5z"/></svg>
+    無料体験を予約する
+  </a>
+</div>
+
+</body>
+</html>
